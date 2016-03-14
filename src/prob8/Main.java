@@ -66,7 +66,8 @@ public class Main {
 	static void doCancel() throws IOException {
 		System.out.println("Your name: ");
 		String name = br.readLine();
-		ts.cancelReservation( name );
+		boolean result = ts.cancelReservation( name );
+		System.out.println( result ? "Canceled" : "Not Found" );
 	}
 	
 	static void doCount() throws IOException {
