@@ -64,7 +64,9 @@ public class Main {
 	}
 	
 	static void doCancel() throws IOException {
-		/* 예약 취소 기능 구현 코드를 작성합니다 */
+		System.out.println("Your name: ");
+		String name = br.readLine();
+		ts.cancelReservation( name );
 	}
 	
 	static void doCount() throws IOException {

@@ -13,7 +13,13 @@ public class TicketingSystem {
 	}
 	
 	public boolean cancelReservation( String customer_name ) {
-		/* 예약 취소 기능 구현 코드를 작성합니다. */
+		int count = listReservation.size();
+		for( int i = 0; i < count; i++ ){
+			if( customer_name.equals( listReservation.get( i ).getCustomerName() ) ){
+				listReservation.remove( i );
+				return true;
+			}
+		}
 		return false;
 	}
 		
